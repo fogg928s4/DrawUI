@@ -1,0 +1,10 @@
+{
+  "profiles": {
+    "DrawIt (Package)": {
+      "commandName": "MsixPackage"
+    },
+    "DrawIt (Unpackaged)": {
+      "commandName": "Project"
+    }
+  }
+}
