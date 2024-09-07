@@ -37,7 +37,7 @@
             <ToggleButton x:Name="colorPickrBtn" Width="45" Height="45" Click="colorPickrBtn_Click">
                 <FontIcon Foreground="Black" Glyph="&#xE771;"/>
             </ToggleButton>
-            <!--Controls the currently selected colour-->
+            <!--Controls the currently selected brush colour-->
             <SplitButton x:Name="colorBtn" Foreground="Black" Padding="0" MinHeight="0" MinWidth="0" VerticalAlignment="Top">
                 <Border x:Name="currentColor" Width="45" Height="45" Background="Black" Margin="0" CornerRadius="5,5,5,5"/>
                 <SplitButton.Flyout>
@@ -50,6 +50,18 @@
                 </SplitButton.Flyout>
             </SplitButton>
 
+            <!--For the background colour -->
+            <SplitButton x:Name="backColorBtn" Foreground="Black" Padding="0" MinHeight="0" MinWidth="0" VerticalAlignment="Top">
+                <Border x:Name="backgColor" Width="45" Height="45" Background="White" Margin="0" CornerRadius="5,5,5,5"/>
+                <SplitButton.Flyout>
+                    <Flyout Placement="Bottom">
+                        <ColorPicker x:Name="backColorPicker" ColorSpectrumShape="Box" IsMoreButtonVisible="False" IsColorSliderVisible="True"
+                     IsColorChannelTextInputVisible="False" IsHexInputVisible="True" IsAlphaEnabled="False" IsAlphaSliderVisible="True"
+                     ColorChanged="backColorPicker_ColorChanged"/>
+                        <!--Color Changed is the event handler-->
+                    </Flyout>
+                </SplitButton.Flyout>
+            </SplitButton>
             <!--for he brushes-->
             <ComboBox x:Name="comboBrushThick" Foreground="Black" ItemsSource="{x:Bind brushThick}"
                       SelectedIndex="4" Width="80" Height="45"

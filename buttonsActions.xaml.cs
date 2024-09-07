@@ -84,6 +84,11 @@ namespace DrawIt {
             currentColor.Background = new SolidColorBrush(args.NewColor);
 
         }
+        private void backColorPicker_ColorChanged(ColorPicker sender, ColorChangedEventArgs args) {
+            canvas.Background = new SolidColorBrush(args.NewColor);
+            backgColor.Background = new SolidColorBrush(args.NewColor);
+
+        }
         private void comboBrushThick_SelectionChanged(object sender, SelectionChangedEventArgs e) {
             selectedIndex = comboBrushThick.SelectedIndex;
         }

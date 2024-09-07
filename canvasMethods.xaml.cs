@@ -114,6 +114,7 @@ namespace DrawIt {
                         Canvas.SetLeft(currentEllipse, left);
                         Canvas.SetTop(currentEllipse, top);
                         break;
+//god knows what it does here, i dont
                     case DrawingMode.Triangle:
                         double centerX = (startPoint.X + currentPoint.X) / 2;
                         double centerY = (startPoint.Y + currentPoint.Y) / 2;
